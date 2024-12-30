@@ -1,0 +1,17 @@
+.not_found {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+    h1 {
+        font-family: "IntegralCF";
+        font-size: 3rem;
+        font-weight: bold;
+        color: var(--text-color);
+
+        font-weight: 700;
+
+        text-align: center;
+    }
+}

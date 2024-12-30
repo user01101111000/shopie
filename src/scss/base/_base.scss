@@ -1,0 +1,15 @@
+@forward "./font";
+@forward "../utils/classes";
+
+:root {
+    font-family: "Satoshi", sans-serif;
+
+    --bg-color: #F5F5F5;
+    --text-color: #0F0F0F;
+}
+
+
+[data-theme="DARK"] {
+    --bg-color: #0F0F0F;
+    --text-color: #F5F5F5;
+}
