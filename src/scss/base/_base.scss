@@ -9,9 +9,10 @@
     --bg-color: #F5F5F5;
     --text-color: #222222;
     --border-color: #222222;
+    --navbar-border-color: rgba(0, 0, 0, 0.3);
     --mobile-menu-back: rgba(255, 255, 255, 0.5);
 
-    --footer-color: #F0F0F0
+    --footer-color: #F0F0F0;
 }
 
 
@@ -19,6 +20,7 @@
     --bg-color: #222222;
     --text-color: #F5F5F5;
     --border-color: #F5F5F5;
+    --navbar-border-color: rgba(255, 255, 255, 0.3);
     --mobile-menu-back: rgba(0, 0, 0, 0.5);
 
     --footer-color: #0F0F0F
@@ -26,11 +28,5 @@
 
 
 ::-webkit-scrollbar {
-    width: 5px;
-    height: 5px;
-    background-color: var(--bg-color);
-}
-
-::-webkit-scrollbar-thumb {
-    background-color: var(--text-color);
+    width: 0;
 }

@@ -1,14 +1,25 @@
 @use "../utils/mixins" as *;
 
 .nav_bar {
+    width: 100%;
+    position: sticky;
+    top: 0;
+    left: 0;
+
+    z-index: 100;
+
+    border-bottom: 0.5px solid var(--navbar-border-color);
+
+    background-color: var(--bg-color);
+    transition: all 0.3s ease-in-out;
 
     .nav_bar_container {
         display: flex;
         justify-content: space-between;
         align-items: center;
 
-        padding-block: 1.5rem;
 
+        padding-block: 1.5rem;
 
         // logo
 
@@ -79,6 +90,7 @@
                 position: fixed;
                 inset: 0;
 
+
                 transform: translateX(-100%);
 
                 background-color: var(--mobile-menu-back);
@@ -118,8 +130,8 @@
                 display: flex;
                 align-items: center;
 
-
-                border: 1px solid var(--border-color);
+                border-radius: 20px;
+                border: 1px solid var(--navbar-border-color);
                 padding: .8rem;
                 gap: .5rem;
 
@@ -141,6 +153,7 @@
             .nav_tools_icon {
                 font-size: 1.3rem;
                 cursor: pointer;
+                user-select: none;
             }
 
             .menu_icon {
@@ -158,5 +171,35 @@
         }
     }
 
+
+    .mobile_search_area {
+        display: none;
+        padding-bottom: 1.5rem;
+
+        .input_area {
+            width: 100%;
+            display: flex;
+            align-items: center;
+
+            border-radius: 20px;
+            border: 1px solid var(--navbar-border-color);
+            padding: .8rem;
+            gap: .5rem;
+
+
+            input {
+                flex: 1;
+                border: none;
+                outline: none;
+                background-color: transparent;
+                color: var(--text-color);
+
+            }
+        }
+
+        @include respond(tab-port) {
+            display: block;
+        }
+    }
 
 }

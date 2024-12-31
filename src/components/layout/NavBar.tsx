@@ -6,9 +6,12 @@ import React from "react";
 
 import { NavigateFunction, NavLink } from "react-router";
 import { MdOutlineShoppingBag } from "react-icons/md";
-import { FaRegHeart } from "react-icons/fa";
 import { FiUser, FiSearch } from "react-icons/fi";
 import { IoMdMenu, IoMdClose } from "react-icons/io";
+
+import { MdOutlineLightMode, MdOutlineDarkMode } from "react-icons/md";
+
+
 
 // components
 
@@ -17,10 +20,14 @@ import HeaderBanner from "./HeaderBanner";
 // other
 
 import { useNavigate } from "react-router";
+import { useTheme } from "../../context/ThemeContext";
 
 
 const NavBar = () => {
 
+
+    const { chnage_theme } = useTheme();
+    const [mode, setMode] = React.useState<boolean>(false)
     const navigate: NavigateFunction = useNavigate();
     const [show_menu, setShowMenu] = React.useState<boolean>(false)
 
@@ -52,7 +59,13 @@ const NavBar = () => {
                     <FiSearch className="nav_tools_icon" />
                 </div>
 
-                <FaRegHeart className="nav_tools_icon" />
+                {mode ? <MdOutlineLightMode className="nav_tools_icon" onClick={() => {
+                    chnage_theme()
+                    setMode(false)
+                }} /> : <MdOutlineDarkMode className="nav_tools_icon" onClick={() => {
+                    chnage_theme()
+                    setMode(true)
+                }} />}
                 <MdOutlineShoppingBag className="nav_tools_icon" />
                 <FiUser className="nav_tools_icon" />
 
@@ -61,6 +74,16 @@ const NavBar = () => {
 
 
         </nav>
+
+
+        <div className="mobile_search_area container">
+            <div className="input_area">
+
+                <input type="text" placeholder="Search for products" />
+
+                <FiSearch className="nav_tools_icon" />
+            </div>
+        </div>
 
 
     </header>

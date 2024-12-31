@@ -6,10 +6,16 @@
 
     position: relative;
 
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 15px;
+    transition: all 0.3s ease-in-out;
+
     .email_subscribe {
         position: absolute;
         top: -3rem;
         left: 50%;
+
+        transition: all 0.3s ease-in-out;
+
         transform: translate(-50%, -50%);
 
         background-color: var(--border-color);
@@ -49,14 +55,15 @@
             gap: 1rem;
 
             .input_area {
-
+                border-radius: 20px;
                 background-color: var(--bg-color);
                 display: flex;
 
                 padding-inline: 1rem;
 
+
                 .input_area_icon {
-                    font-size: 1.5rem;
+                    font-size: 1.2rem;
                     color: var(--text-color);
 
                     @include respond(tab-port) {
@@ -71,8 +78,8 @@
                     color: var(--border-color);
                     border: none;
                     outline: none;
-                    font-size: 1.2rem;
-                    padding: .7rem;
+                    font-size: 1.1rem;
+                    padding: .8rem;
                     width: 100%;
 
 
@@ -87,8 +94,8 @@
             button {
                 background-color: var(--bg-color);
                 color: var(--border-color);
-                padding: .7rem;
-
+                padding: .8rem;
+                border-radius: 20px;
 
                 border: none;
                 outline: none;
@@ -110,7 +117,7 @@
 
 
         @include respond(tab-port) {
-            
+
             top: -6rem;
 
             flex-direction: column;
