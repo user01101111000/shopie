@@ -1,0 +1,162 @@
+@use "../utils/mixins" as *;
+
+.nav_bar {
+
+    .nav_bar_container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        padding-block: 1.5rem;
+
+
+        // logo
+
+        .logo {
+            font-family: "IntegralCF";
+            font-size: 2rem;
+            font-weight: bold;
+
+            cursor: pointer;
+            user-select: none;
+
+            @include respond(phone) {
+                font-size: 1.5rem;
+            }
+        }
+
+
+        // nav links
+
+
+        .nav_links {
+
+            display: flex;
+            align-items: center;
+
+            gap: 1rem;
+
+            transition: all 0.3s ease-in-out;
+
+
+            li {
+                position: relative;
+
+
+                a {
+                    color: var(--text-color);
+                    font-weight: 500;
+                }
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    bottom: -.2rem;
+                    left: 0;
+                    height: 2px;
+                    width: 0;
+                    background-color: var(--border-color);
+                    transition: all 0.3s ease-in-out;
+                }
+
+                &:hover::after {
+                    width: 100%;
+                }
+            }
+
+            .close_icon_mobile {
+                display: none;
+
+
+                @include respond(tab-port) {
+                    display: block;
+                    margin-top: 2rem;
+                    font-size: 3rem;
+                }
+            }
+
+            @include respond(tab-port) {
+                position: fixed;
+                inset: 0;
+
+                transform: translateX(-100%);
+
+                background-color: var(--mobile-menu-back);
+                backdrop-filter: blur(20px);
+
+
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+
+
+                padding: 1rem;
+
+                a {
+                    font-size: 3rem;
+                    font-weight: bold;
+                }
+
+                &.show_menu {
+                    transform: translateX(0);
+                }
+
+            }
+        }
+
+
+        // nav tools
+
+        .nav_tools {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+
+
+            .input_area {
+                width: 300px;
+                display: flex;
+                align-items: center;
+
+
+                border: 1px solid var(--border-color);
+                padding: .8rem;
+                gap: .5rem;
+
+
+                input {
+                    flex: 1;
+                    border: none;
+                    outline: none;
+                    background-color: transparent;
+                    color: var(--text-color);
+
+                }
+
+                @include respond(tab-port) {
+                    display: none;
+                }
+            }
+
+            .nav_tools_icon {
+                font-size: 1.3rem;
+                cursor: pointer;
+            }
+
+            .menu_icon {
+                display: none;
+
+                @include respond(tab-port) {
+                    display: block;
+                }
+            }
+
+            @include respond(phone) {
+                gap: .5rem;
+            }
+
+        }
+    }
+
+
+}

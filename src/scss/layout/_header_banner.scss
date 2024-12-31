@@ -1,0 +1,43 @@
+@use "../utils/mixins" as *;
+
+.header_banner {
+    width: 100%;
+    background-color: var(--border-color);
+    padding-block: .8rem;
+
+    .header_banner_container {
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        gap: 1rem;
+
+        color: var(--bg-color);
+
+        p {
+            font-weight: 300;
+            letter-spacing: 0.5px;
+
+            text-align: center;
+
+            span {
+                text-decoration: underline;
+                font-weight: 600;
+                cursor: pointer;
+            }
+
+
+
+        }
+
+
+        .close_icon {
+            flex-shrink: 0;
+            cursor: pointer;
+            user-select: none;
+        }
+    }
+
+
+}

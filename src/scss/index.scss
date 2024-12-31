@@ -6,6 +6,9 @@
 // layout
 
 @forward "./layout/main_layout";
+@forward "./layout/header";
+@forward "./layout/footer";
+@forward "./layout/header_banner";
 
 // containers
 @forward "./containers/not_found";

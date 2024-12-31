@@ -3,13 +3,34 @@
 
 :root {
     font-family: "Satoshi", sans-serif;
+    font-style: normal;
+    font-size: 0.9rem;
 
     --bg-color: #F5F5F5;
-    --text-color: #0F0F0F;
+    --text-color: #222222;
+    --border-color: #222222;
+    --mobile-menu-back: rgba(255, 255, 255, 0.5);
+
+    --footer-color: #F0F0F0
 }
 
 
 [data-theme="DARK"] {
-    --bg-color: #0F0F0F;
+    --bg-color: #222222;
     --text-color: #F5F5F5;
+    --border-color: #F5F5F5;
+    --mobile-menu-back: rgba(0, 0, 0, 0.5);
+
+    --footer-color: #0F0F0F
+}
+
+
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+    background-color: var(--bg-color);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--text-color);
 }

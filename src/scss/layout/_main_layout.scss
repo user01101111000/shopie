@@ -1,5 +1,5 @@
 .main_layout {
-    overflow-y: hidden;
+    overflow-x: hidden;
 
     height: 100dvh;
     width: 100%;
@@ -13,5 +13,6 @@
     color: var(--text-color);
 
     transition: all 0.3s ease-in-out;
+
 
 }
