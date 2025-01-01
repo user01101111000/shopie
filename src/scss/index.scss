@@ -14,7 +14,10 @@
 @forward "./containers/not_found";
 @forward "./containers/home_container";
 
+
 // components
 
 @forward "./components/page_loading";
 @forward "./components/hero";
+@forward "./components/section_title";
+@forward "./components/category";

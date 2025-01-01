@@ -74,35 +74,32 @@
 
     .swiper_wrapper {
 
-
-
         .swiper {
             height: 100% !important;
             width: 100% !important;
             user-select: none;
 
+            .swiper-slide {
+                height: 100% !important;
+                width: 100% !important;
 
+                img {
+                    height: 100%;
+                    width: 100%;
+                }
 
-        }
-
-        .swiper-slide {
-            height: 100% !important;
-            width: 100% !important;
-
-            img {
-                height: 100%;
-                width: 100%;
             }
 
-
         }
+
+
 
 
     }
 
     @include respond(tab-port) {
 
-        min-height: 45vh;
+        min-height: 40vh;
         grid-template-columns: 1fr;
         grid-template-rows: auto 1fr;
 

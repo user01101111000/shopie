@@ -1,5 +1,5 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Pagination } from 'swiper/modules';
+import { Pagination, Autoplay } from 'swiper/modules';
 
 // @ts-ignore
 import 'swiper/css';
@@ -18,10 +18,12 @@ const Slider = () => {
 
 
     return <Swiper
-        modules={[Pagination]}
+        modules={[Pagination, Autoplay]}
         grabCursor
+        autoplay={{ delay: 2000, pauseOnMouseEnter: true, disableOnInteraction: false }}
         pagination={{ clickable: true }}
         spaceBetween={20}
+        speed={1200}
         slidesPerView={1}
     >
         {sliderImgs}
