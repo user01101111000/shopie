@@ -1,17 +1,15 @@
 // react
 
-import React from "react";
+import React, { useEffect } from "react";
 
 // icons 
 
 import { NavigateFunction, NavLink } from "react-router";
 import { MdOutlineShoppingBag } from "react-icons/md";
-import { FiUser, FiSearch } from "react-icons/fi";
+import { FiUser } from "react-icons/fi";
 import { IoMdMenu, IoMdClose } from "react-icons/io";
 
 import { MdOutlineLightMode, MdOutlineDarkMode } from "react-icons/md";
-
-
 
 // components
 
@@ -21,6 +19,7 @@ import HeaderBanner from "./HeaderBanner";
 
 import { useNavigate } from "react-router";
 import { useTheme } from "../../context/ThemeContext";
+import SearchComponent from "./SearchComponent";
 
 
 const NavBar = () => {
@@ -30,6 +29,23 @@ const NavBar = () => {
     const [mode, setMode] = React.useState<boolean>(false)
     const navigate: NavigateFunction = useNavigate();
     const [show_menu, setShowMenu] = React.useState<boolean>(false)
+
+
+    const [isSmallScreen, setIsSmallScreen] = React.useState(false);
+
+    useEffect(() => {
+        const handleResize = () => {
+            setIsSmallScreen(window.innerWidth < 1024);
+        };
+
+        handleResize();
+        window.addEventListener("resize", handleResize);
+
+        return () => {
+            window.removeEventListener("resize", handleResize);
+        };
+    }, []);
+
 
     return <header className="nav_bar">
         <HeaderBanner />
@@ -42,9 +58,8 @@ const NavBar = () => {
 
             <ul className={"nav_links" + (show_menu ? " show_menu" : "")}>
                 <li><NavLink to="/">Home</NavLink></li>
-                <li><NavLink to="/">Shop</NavLink></li>
-                <li><NavLink to="/">On Sale</NavLink></li>
-                <li><NavLink to="/">Brands</NavLink></li>
+                <li><NavLink to="/about">About</NavLink></li>
+                <li><NavLink to="/contact">Contact</NavLink></li>
 
                 <IoMdClose className="close_icon_mobile" onClick={() => setShowMenu(false)} />
 
@@ -52,12 +67,8 @@ const NavBar = () => {
             </ul>
 
             <div className="nav_tools">
-                <div className="input_area">
 
-                    <input type="text" placeholder="Search for products" />
-
-                    <FiSearch className="nav_tools_icon" />
-                </div>
+                {!isSmallScreen && <SearchComponent />}
 
                 {mode ? <MdOutlineLightMode className="nav_tools_icon" onClick={() => {
                     chnage_theme()
@@ -76,14 +87,9 @@ const NavBar = () => {
         </nav>
 
 
-        <div className="mobile_search_area container">
-            <div className="input_area">
-
-                <input type="text" placeholder="Search for products" />
-
-                <FiSearch className="nav_tools_icon" />
-            </div>
-        </div>
+        {isSmallScreen && <div className="container" style={{
+            paddingBottom: "1.5rem"
+        }}><SearchComponent /></div>}
 
 
     </header>

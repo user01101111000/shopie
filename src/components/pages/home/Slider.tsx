@@ -13,7 +13,7 @@ const Slider = () => {
     const imgs = [img_0, img_1, img_2, img_3, img_4, img_5, img_6, img_7];
 
     const sliderImgs = imgs.map((img, i) => <SwiperSlide key={i}>
-        <img src={img} alt={"img_" + i} />
+        <img src={img} alt={"img_" + i} loading='lazy' />
     </SwiperSlide>)
 
 

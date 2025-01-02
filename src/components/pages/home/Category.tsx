@@ -15,7 +15,7 @@ import { MdOutlinePhoneAndroid } from "react-icons/md";
 import { FaTv } from "react-icons/fa";
 import { MdOutlineLaptopMac } from "react-icons/md";
 import { FaHome } from "react-icons/fa";
-import React, { MutableRefObject, useEffect, useRef } from "react";
+import React, { MutableRefObject, useRef } from "react";
 
 const Category = () => {
 

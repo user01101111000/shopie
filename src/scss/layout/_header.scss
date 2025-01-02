@@ -13,6 +13,98 @@
     background-color: var(--bg-color);
     transition: all 0.3s ease-in-out;
 
+
+
+    .input_area_header {
+        position: relative;
+        width: 300px;
+        display: flex;
+        align-items: center;
+
+        border-radius: 20px;
+        border: 1px solid var(--navbar-border-color);
+        padding: .8rem;
+        gap: .5rem;
+
+
+
+        input {
+            flex: 1;
+            border: none;
+            outline: none;
+            background-color: transparent;
+            color: var(--text-color);
+
+        }
+
+
+
+
+
+        .search_result_wrapper {
+            max-height: 500px;
+            overflow-y: scroll;
+
+
+            position: absolute;
+            top: 120%;
+            left: 0;
+            width: 100%;
+
+
+            border-radius: 20px;
+
+            background-color: var(--footer-color);
+            padding: 1.5rem 1rem;
+
+            z-index: 10;
+
+
+            ul {
+                li {
+                    padding: 1rem;
+                    cursor: pointer;
+                    border-radius: 10px;
+
+                    display: flex;
+                    gap: 1rem;
+
+                    img {
+                        width: 4rem;
+                        height: 4rem;
+                        border-radius: 20px;
+                        object-fit: cover;
+                    }
+
+                    p {
+                        display: -webkit-box;
+                        -webkit-line-clamp: 3;
+                        -webkit-box-orient: vertical;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+
+                    }
+
+
+
+                    &:hover {
+                        background-color: var(--bg-color);
+                    }
+                }
+            }
+        }
+
+        @include respond(tab-port) {
+            width: 100%;
+            
+
+            
+
+        }
+
+    }
+
+
     .nav_bar_container {
         display: flex;
         justify-content: space-between;
@@ -104,6 +196,8 @@
 
                 padding: 1rem;
 
+                z-index: 995;
+
                 a {
                     font-size: 3rem;
                     font-weight: bold;
@@ -124,31 +218,6 @@
             align-items: center;
             gap: 1rem;
 
-
-            .input_area {
-                width: 300px;
-                display: flex;
-                align-items: center;
-
-                border-radius: 20px;
-                border: 1px solid var(--navbar-border-color);
-                padding: .8rem;
-                gap: .5rem;
-
-
-                input {
-                    flex: 1;
-                    border: none;
-                    outline: none;
-                    background-color: transparent;
-                    color: var(--text-color);
-
-                }
-
-                @include respond(tab-port) {
-                    display: none;
-                }
-            }
 
             .nav_tools_icon {
                 font-size: 1.3rem;

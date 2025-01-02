@@ -17,5 +17,9 @@ import img_5 from "../assets/images/img_5.webp";
 import img_6 from "../assets/images/img_6.webp";
 import img_7 from "../assets/images/img_7.webp";
 
+// banners
 
-export { visa, master, paypal, apay, gpay, img_0, img_1, img_2, img_3, img_4, img_5, img_6, img_7 };
+import banner from "../assets/images/black_friday_banner.webp"
+
+
+export { visa, master, paypal, apay, gpay, img_0, img_1, img_2, img_3, img_4, img_5, img_6, img_7, banner };

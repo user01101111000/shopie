@@ -10,8 +10,6 @@
 
     gap: 1.5rem;
 
-    margin-bottom: 15rem;
-
     .category_title_section {
         flex: 1;
         display: flex;
@@ -122,9 +120,5 @@
 
     }
 
-    @include respond(phone-sm) {
-
-        margin-bottom: 18rem;
-
-    }
+ 
 }
