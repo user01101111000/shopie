@@ -1,6 +1,7 @@
 import { apay, gpay, master, paypal, visa } from "../../utils/assets";
-import { FaTwitter, FaInstagram, FaFacebook, FaGithub } from "react-icons/fa";
+import { FaTwitter, FaInstagram, FaFacebook, FaGithub, } from "react-icons/fa";
 import { TfiEmail } from "react-icons/tfi";
+
 
 
 const Footer = () => {
@@ -102,7 +103,6 @@ const Footer = () => {
 
 
         </div>
-
 
     </footer>
 }
