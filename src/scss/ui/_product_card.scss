@@ -4,7 +4,7 @@
     .product_card {
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: 350px auto;
+        grid-template-rows: 300px auto;
         gap: 2rem;
 
         .product_card_image_wrapper {
@@ -179,7 +179,7 @@
                 .ant-rate-star.ant-rate-star-full,
                 .ant-rate-star.ant-rate-star-zero,
                 .ant-rate-star.ant-rate-star-half.ant-rate-star-active {
-                    font-size: 1.5rem;
+                    font-size: 1.2rem;
                     color: #ffa534;
 
 
@@ -198,10 +198,6 @@
             }
         }
 
-
-        @include respond(desktop) {
-            grid-template-rows: 300px auto;
-        }
 
         @include respond(tab-land) {
             grid-template-rows: 250px auto;
