@@ -11,7 +11,9 @@ const SearchComponent = () => {
 
 
     const li_elements = data?.products.filter((product: Product) => product.title.toLowerCase().includes(input_value)).map((product: Product) => <li key={product.id}>
-        <img src={product.image} alt={product.title} />
+        <img src="https://img.freepik.com/free-vector/white-blurred-background_1034-249.jpg?w=360" alt={product.title} data-src={product.image} onLoad={(e) => {
+            e.currentTarget.src = e.currentTarget.dataset.src as string;
+        }} />
         <p>{product.title}</p>
     </li>)
 

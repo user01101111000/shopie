@@ -12,6 +12,7 @@
   "dependencies": {
     "@reduxjs/toolkit": "^2.5.0",
     "@tanstack/react-query": "^5.62.11",
+    "antd": "^5.22.7",
     "axios": "^1.7.9",
     "gsap": "^3.12.5",
     "nope-validator": "^1.0.4",

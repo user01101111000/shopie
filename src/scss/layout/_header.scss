@@ -70,13 +70,17 @@
                     gap: 1rem;
 
                     img {
-                        width: 4rem;
+
                         height: 4rem;
+                        width: 4rem;
+
                         border-radius: 20px;
                         object-fit: cover;
+
                     }
 
                     p {
+
                         display: -webkit-box;
                         -webkit-line-clamp: 3;
                         -webkit-box-orient: vertical;
@@ -96,9 +100,9 @@
 
         @include respond(tab-port) {
             width: 100%;
-            
 
-            
+
+
 
         }
 

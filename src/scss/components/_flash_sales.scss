@@ -1,0 +1,67 @@
+@use "../utils/mixins" as *;
+
+.flash_sales_container {
+    display: flex;
+    flex-direction: column;
+
+    gap: 1.5rem;
+
+    .flash_sales_container_header {
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        gap: 1.5rem;
+
+        .flash_sales_arrows_wrapper {
+
+            display: flex;
+            align-items: center;
+            gap: .5rem;
+
+
+            .flash_sales_arrow {
+                background-color: var(--border-color);
+                user-select: none;
+                padding: .7rem;
+                border-radius: 50%;
+                cursor: pointer;
+
+                .arrow_icon {
+                    font-size: 1.5rem;
+                    color: var(--bg-color);
+                }
+
+            }
+
+            @include respond(phone-sm) {
+                margin-left: auto;
+            }
+        }
+
+        h1 {
+            font-size: 2rem;
+            font-family: "IntegralCF";
+            font-weight: bold;
+            color: var(--text-color);
+        }
+
+        @include respond(phone-sm) {
+            flex-direction: column;
+            justify-content: start;
+            align-items: start;
+
+
+        }
+    }
+
+
+    .flash_sales_view_all_products_wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        margin-top: 2rem;
+    }
+}

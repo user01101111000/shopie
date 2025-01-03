@@ -6,17 +6,14 @@
 
     display: flex;
     flex-direction: column;
-
     overflow: hidden;
-
+    
     padding-block: 2rem;
     gap: 4rem;
 
 
     @include respond(phone-sm) {
-
         gap: 2rem;
-
     }
 
 

@@ -6,7 +6,6 @@ type BannerProps = {
     alt: string,
     url: string
 };
-
 const Banner: React.FC<BannerProps> = ({ alt, src, url }) => {
 
     const navigate: NavigateFunction = useNavigate();

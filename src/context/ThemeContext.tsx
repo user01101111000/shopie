@@ -4,9 +4,8 @@ import { ThemeContextType } from "../ts/types/Theme";
 
 const ThemeContext = React.createContext<ThemeContextType>({
     theme: ETheme.LIGHT,
-    chnage_theme: () => { }
+    change_theme: () => { }
 });
-
 
 const ThemeContextProvider: React.FC<{ children: React.ReactNode }> = (props: { children: React.ReactNode }) => {
 
@@ -14,7 +13,7 @@ const ThemeContextProvider: React.FC<{ children: React.ReactNode }> = (props: { 
 
     const data: ThemeContextType = {
         theme,
-        chnage_theme: () => {
+        change_theme: () => {
             const current_theme = theme === ETheme.LIGHT ? ETheme.DARK : ETheme.LIGHT;
 
             localStorage.setItem("theme", current_theme);

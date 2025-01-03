@@ -25,7 +25,7 @@ import SearchComponent from "./SearchComponent";
 const NavBar = () => {
 
 
-    const { chnage_theme } = useTheme();
+    const { change_theme } = useTheme();
     const [mode, setMode] = React.useState<boolean>(false)
     const navigate: NavigateFunction = useNavigate();
     const [show_menu, setShowMenu] = React.useState<boolean>(false)
@@ -71,10 +71,10 @@ const NavBar = () => {
                 {!isSmallScreen && <SearchComponent />}
 
                 {mode ? <MdOutlineLightMode className="nav_tools_icon" onClick={() => {
-                    chnage_theme()
+                    change_theme()
                     setMode(false)
                 }} /> : <MdOutlineDarkMode className="nav_tools_icon" onClick={() => {
-                    chnage_theme()
+                    change_theme()
                     setMode(true)
                 }} />}
                 <MdOutlineShoppingBag className="nav_tools_icon" />
